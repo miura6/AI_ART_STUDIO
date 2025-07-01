@@ -62,37 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Contact Form Handling
-    const contactForm = document.getElementById('contactForm');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const subject = formData.get('subject');
-            const message = formData.get('message');
-
-            // Simple validation
-            if (!name || !email || !message) {
-                showNotification('必須項目を入力してください。', 'error');
-                return;
-            }
-
-            if (!isValidEmail(email)) {
-                showNotification('有効なメールアドレスを入力してください。', 'error');
-                return;
-            }
-
-            // Simulate form submission
-            showNotification('お問い合わせありがとうございます。後日ご連絡いたします。', 'success');
-            this.reset();
-        });
-    }
-
     // Navbar scroll effect
     window.addEventListener('scroll', function() {
         const navbar = document.querySelector('.navbar');
@@ -254,17 +223,26 @@ function showPortfolioModal(category) {
         character: [
             'character-work-1.jpg',
             'character-work-2.jpg',
-            'character-work-3.jpg'
+            'character-work-3.jpg',
+            'character-work-4.jpg',
+            'character-work-5.jpg',
+            'character-work-6.jpg'
         ],
         animal: [
             'animal-work-1.jpg',
             'animal-work-2.jpg',
-            'animal-work-3.jpg'
+            'animal-work-3.jpg',
+            'animal-work-4.jpg',
+            'animal-work-5.jpg',
+            'animal-work-6.jpg'
         ],
         other: [
             'landscape-work-1.jpg',
             'landscape-work-2.jpg',
-            'landscape-work-3.jpg'
+            'landscape-work-3.jpg',
+            'landscape-work-4.jpg',
+            'landscape-work-5.jpg',
+            'landscape-work-6.jpg'
         ]
     };
 
