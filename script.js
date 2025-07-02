@@ -1,5 +1,11 @@
 // DOM Content Loaded
 document.addEventListener('DOMContentLoaded', function() {
+    // Prevent automatic scrolling to hash on page load
+    if (window.location.hash) {
+        // Remove hash from URL without scrolling
+        history.replaceState(null, null, window.location.pathname + window.location.search);
+    }
+    
     // Mobile Navigation Toggle
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
