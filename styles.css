@@ -270,6 +270,15 @@ body {
     transform: translateY(-3px) scale(1.1);
 }
 
+/* Fiverrアイコン専用スタイル */
+.sns-icon .fa-fiverr {
+    color: var(--white);
+}
+
+.sns-icon:hover .fa-fiverr {
+    color: var(--black);
+}
+
 /* Section Styles */
 section {
     padding: 5rem 0;
